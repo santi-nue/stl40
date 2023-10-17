@@ -1,4 +1,4 @@
-[app]
+r828d[app]
 
 # (str) Title of your application
 title = Kivy Launcher
@@ -36,7 +36,8 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy, android
+#requirements = kivy, android
+requirements = kivy==2.1.0,kivymd==1.1.1,python3==3.8.15,png,openssl,requests,jnius,plyer,android,mido,packaging,pretty_midi,pychord,numpy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
