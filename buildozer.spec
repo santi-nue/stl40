@@ -74,6 +74,7 @@ osx.python_version = 3
 #
 # Android specific
 #
+android.permissions = INTERNET
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
