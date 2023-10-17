@@ -1,4 +1,4 @@
-r828d[app]
+[app]
 
 # (str) Title of your application
 title = Kivy Launcher
