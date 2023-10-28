@@ -39,7 +39,7 @@ version = 0.1
 # requirements = kivy, android
 # requirements = kivy==2.1.0,https://github.com/kivymd/KivyMD/archive/master.zip,python3==3.8.15,png,openssl,requests,jnius,plyer,android,mido,packaging,pretty_midi,pychord,numpy
 # requirements = python3,kivy==2.2.1,https://github.com/kivymd/KivyMD/archive/master.zip,cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing
-requirements = python3==3.9.10, hostpython3==3.9.10, kivy, https://github.com/kivymd/KivyMD/archive/master.zip, pillow, cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing
+requirements = python3==3.9.10, hostpython3==3.9.10, kivy, https://github.com/kivymd/KivyMD/archive/master.zip, pillow, cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing,jnius
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -76,7 +76,8 @@ osx.python_version = 3
 #
 # Android specific
 #
-android.permissions = INTERNET
+# android.permissions = INTERNET
+android.permissions = android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
