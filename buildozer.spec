@@ -39,7 +39,7 @@ version = 0.1
 # requirements = kivy, android
 # requirements = kivy==2.1.0,https://github.com/kivymd/KivyMD/archive/master.zip,python3==3.8.15,png,openssl,requests,jnius,plyer,android,mido,packaging,pretty_midi,pychord,numpy
 # requirements = python3,kivy==2.2.1,https://github.com/kivymd/KivyMD/archive/master.zip,cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing
-requirements = python3==3.9.10, hostpython3==3.9.10, kivy, https://github.com/kivymd/KivyMD/archive/master.zip, pillow, cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing,jnius
+requirements = python3==3.9.10, hostpython3==3.9.10, kivy, https://github.com/kivymd/KivyMD/archive/master.zip,sdl2_mixer,android,androidx.webkit,pillow, cachetools,pyasn1-modules,pyasn1,rsa,six,urllib3,requests,charset-normalizer,idna,docutils,Kivy-Garden,Pygments,httplib2,pyparsing,jnius
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -77,7 +77,7 @@ osx.python_version = 3
 # Android specific
 #
 # android.permissions = INTERNET
-android.permissions = android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE
+android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE,android.permission.BLUETOOTH,android.permission.BLUETOOTH_ADMIN,android.permission.ACCESS_FINE_LOCATION,android.permission.INTERNET,android.permission.VIBRATE,android.permission.ACCESS_WIFI_STATE,android.permission.CHANGE_WIFI_STATE,android.permission.CHANGE_NETWORK_STATE
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
@@ -214,10 +214,12 @@ android.archs = armeabi-v7a,arm64-v8a
 # (str) Name of the certificate to use for signing the release version
 #ios.codesign.release = %(ios.codesign.debug)s
 
+
 # (list) Permissions
 [app:android.permissions]
 READ_EXTERNAL_STORAGE
 WRITE_EXTERNAL_STORAGE
+ACCESS_FINE_LOCATION
 ACCESS_LOCATION_EXTRA_COMMANDS
 ACCESS_NETWORK_STATE
 ACCESS_NOTIFICATION_POLICY
