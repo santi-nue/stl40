@@ -43,7 +43,8 @@ class Launcher(App):
         if platform == 'android':
             from android.permissions import request_permissions, Permission
             request_permissions([Permission.READ_EXTERNAL_STORAGE])
-
+            request_permissions([Permission.MANAGE_EXTERNAL_STORAGE])
+    
     def refresh_entries(self):
         data = []
         self.log('starting refresh')
