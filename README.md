@@ -1,4 +1,4 @@
-# Kivy Launcher
+# Kivy Launcher 
 
 (work in progress, not yet published on Google Play)
 
