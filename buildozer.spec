@@ -55,7 +55,7 @@ requirements = python3==3.9.10, hostpython3==3.9.10, kivy, https://github.com/ki
 #icon.filename = %(source.dir)s/data/icon.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
-orientation = portrait
+orientation = landscape
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -71,13 +71,14 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use
-# osx.kivy_version = 1.9.1
+# osx.kivy_version = 1.9.
 
+android.permission.MANAGE_EXTERNAL_STORAGE, 
 #
 # Android specific
 #
 # android.permissions = INTERNET
-android.permissions = android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE,android.permission.BLUETOOTH,android.permission.BLUETOOTH_ADMIN,android.permission.ACCESS_FINE_LOCATION,android.permission.INTERNET,android.permission.VIBRATE,android.permission.ACCESS_WIFI_STATE,android.permission.CHANGE_WIFI_STATE,android.permission.CHANGE_NETWORK_STATE
+android.permissions = android.permission.MANAGE_EXTERNAL_STORAGE, android.permission.INTERNET,android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE,android.permission.BLUETOOTH,android.permission.BLUETOOTH_ADMIN,android.permission.ACCESS_FINE_LOCATION,android.permission.INTERNET,android.permission.VIBRATE,android.permission.ACCESS_WIFI_STATE,android.permission.CHANGE_WIFI_STATE,android.permission.CHANGE_NETWORK_STATE
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
@@ -181,7 +182,7 @@ android.manifest.launch_mode = standard
 #android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
-android.archs = armeabi-v7a,arm64-v8a
+android.archs = armeabi-v7a
 
 #
 # Python for android (p4a) specific
@@ -221,6 +222,7 @@ READ_EXTERNAL_STORAGE
 WRITE_EXTERNAL_STORAGE
 ACCESS_FINE_LOCATION
 ACCESS_LOCATION_EXTRA_COMMANDS
+MANAGE_EXTERNAL_STORAGE
 ACCESS_NETWORK_STATE
 ACCESS_NOTIFICATION_POLICY
 ACCESS_WIFI_STATE
